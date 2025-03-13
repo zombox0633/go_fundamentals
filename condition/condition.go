@@ -1,5 +1,7 @@
 package condition
 
+import "fmt"
+
 // go ไม่มี ternary operator ใช้ได้แต่ if else
 
 func checkNumber(number int) string {
@@ -12,5 +14,5 @@ func checkNumber(number int) string {
 func ShowCondition() {
 	number := 3
 	result := checkNumber(number)
-	println("Number", number, "is", result)
+	fmt.Printf("Number %d is %s\n", number, result)
 }
