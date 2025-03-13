@@ -1,5 +1,10 @@
 ## Go Module และคำสั่งที่เกี่ยวข้อง
 
+### run main
+```sh
+go run main.go
+```
+
 ### การสร้าง Go Module
 ```sh
 // go mod init github.com/zombox0633/starter_go

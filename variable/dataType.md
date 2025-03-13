@@ -98,3 +98,25 @@ Channel เป็นหนึ่งในคุณสมบัติพิเศ
 ```go
    ch := make(chan int, 10) // buffered channel ขนาด 10
 ```
+
+
+## Zero Value
+ใน Go ถ้าตัวแปรไม่ได้ถูกกำหนดค่า จะถูกกำหนดค่าเริ่มต้นเป็น zero value ตามประเภทของมัน
+Go ไม่มี null หรือ undefined เหมือน JS/TS  แต่ใช้ค่า zero value แทน
+
+```go
+   var num int       // ค่าเริ่มต้นคือ 0
+	var str string    // ค่าเริ่มต้นคือ "" (empty string)
+	var isValid bool  // ค่าเริ่มต้นคือ false
+	var arr []int     // ค่าเริ่มต้นคือ nil (slice)
+	var obj map[string]int // ค่าเริ่มต้นคือ nil (map)
+```
+
+**เช็คค่าที่ไม่มีค่า nil**
+ ใช้ได้เฉพาะ ( pointer, slice, map, interface)
+
+```go
+   if mySlice == nil {
+	fmt.Println("Slice ยังไม่มีค่า")
+}
+```
