@@ -21,9 +21,11 @@ func ShowSlice() {
 
 	//ดึงข้อมูล
 	fmt.Println("First element:", minPrice[0])
-	fmt.Println("Last element:", minPrice[len(minPrice)-1])
+	fmt.Println("Last element:", minPrice[len(minPrice)-1]) // minPrice.length - 1
 
 	//การลบข้อมูลใน Slice
-	minPrice = minPrice[1:]
+	// minPrice = minPrice[1:]
+	minPrice = append(minPrice[:1], minPrice[2:]...) // การลบข้อมูลใน Slice โดยใช้ append
 	fmt.Println("After Delete:", minPrice)
+
 }
