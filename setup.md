@@ -1,5 +1,8 @@
 ## Go Module และคำสั่งที่เกี่ยวข้อง
 
+### ลง go
+https://go.dev/dl/
+
 ### run main
 ```sh
 go run main.go
