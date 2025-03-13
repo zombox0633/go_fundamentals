@@ -3,12 +3,13 @@ package variable
 import "fmt"
 
 func ShowMap() {
-	var priceMap map[string]int64
+	var priceMap map[string]int64 // map จะเก็บค่าในรูปแบบ key-value
 
 	priceMap = map[string]int64{"A": 100, "B": 200, "C": 300}
-	priceMap["D"] = 400 // เพิ่มข้อมูลใน Map
-
 	fmt.Printf("Original Map: %v\n", priceMap)
+
+	priceMap["D"] = 400 // เพิ่มข้อมูลใน Map
+	fmt.Printf("add Data Map: %v\n", priceMap)
 
 	priceMap["B"] = 150 // แก้ไขข้อมูลใน Map
 	fmt.Printf("After Modify Map: %v\n", priceMap)
