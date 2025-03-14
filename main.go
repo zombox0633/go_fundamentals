@@ -2,7 +2,7 @@ package main // กำหนดว่าไฟล์นี้เป็น main p
 import (
 	"fmt"
 
-	"github.com/zombox0633/starter_go/variable"
+	"github.com/zombox0633/starter_go/condition"
 )
 
 func main() {
@@ -13,8 +13,9 @@ func main() {
 	// variable.ShowSlice()
 	// variable.ShowMap()
 	// variable.ShowFunction()
-	variable.ShowPointer()
+	// variable.ShowPointer()
 
 	// condition.ShowCondition()
 	// condition.ShowForLoop()
+	condition.ShowSwitchCase()
 }
