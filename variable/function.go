@@ -1,6 +1,7 @@
 package variable
 
 import (
+	"fmt"
 	"reflect"
 )
 
@@ -14,8 +15,17 @@ func plusNumber(a, b int) int {
 	return value
 }
 
+func isLoopFor() {
+	for i := range 5 {
+		defer fmt.Println("i with defer =", i) // defer มีได้มากกว่า 1 ตัวแต่มันจะทำงานเป็น Last in, first out
+	}
+}
+
 func ShowFunction() {
-	showHello()
+	// defer จะทำให้การทำงานตามลับปกติที่จากบนลงล่าง กลายเป็นตัวที่มี defer ทำงานเป็นลำดับสุดท้าย
+	defer showHello()
+
+	isLoopFor()
 
 	result := plusNumber(10, 20)
 	println("Result: ", result)
